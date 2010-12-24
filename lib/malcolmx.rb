@@ -8,5 +8,3 @@ module MalcolmX
     json_response = Crack::JSON.parse(response.body)
   end
 end
-
-puts MalcolmX::find('vabhub').inspect
