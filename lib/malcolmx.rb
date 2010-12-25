@@ -5,7 +5,7 @@ module MalcolmX
 
   def self.find(domain_names = [], &block)
     if domain_names.empty?
-      show_instructions 
+      print_instructions 
       return
     end
 
@@ -27,5 +27,11 @@ module MalcolmX
   def self.lookup(domain)
     response = HTTParty.get("http://instantdomainsearch.com/services/quick/?name=#{domain}")
     json_response = Crack::JSON.parse(response.body)
+  end
+
+  def self.print_instructions
+    puts <<EOF
+    MalcolmX is a cli utility which allows you to check if a domain name is available
+EOF
   end
 end
