@@ -1,17 +1,6 @@
 #!/usr/bin/env ruby
 
 require File.join(File.expand_path(File.dirname(__FILE__)), '../lib/malcolmx')
+require File.join(File.expand_path(File.dirname(__FILE__)), '../lib/cli')
 
-def colorize(text, color_code)
-  "\e[#{color_code}m#{text}\e[0m"
-end
-
-def red(text); colorize(text, 31); end
-def green(text); colorize(text, 32); end
-
-MalcolmX::find(ARGV) do |response|
-  response.each do |x|
-    text = "#{x[:domain]} => #{x[:available] ? "available" : "unavailable"}"
-    puts x[:available] ? green(text) : red(text)
-  end
-end
+Cli.new.execute

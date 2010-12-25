@@ -4,11 +4,6 @@ module MalcolmX
   require 'crack/json'
 
   def self.find(domain_names = [], &block)
-    if domain_names.empty?
-      print_instructions 
-      return
-    end
-
     domain_names.collect do |domain|
       response = lookup(domain)
       response.delete("name")
@@ -29,9 +24,4 @@ module MalcolmX
     json_response = Crack::JSON.parse(response.body)
   end
 
-  def self.print_instructions
-    puts <<EOF
-    MalcolmX is a cli utility which allows you to check if a domain name is available
-EOF
-  end
 end
