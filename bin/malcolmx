@@ -1,5 +1,7 @@
 #!/usr/bin/env ruby
 
 require File.join(File.expand_path(File.dirname(__FILE__)), '../lib/malcolmx')
-puts MalcolmX::find(ARGV[0]).inspect
 
+MalcolmX::find(ARGV) do |response|
+  puts "#{response.inspect}"
+end

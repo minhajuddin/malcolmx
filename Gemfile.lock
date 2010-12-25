@@ -1,0 +1,21 @@
+PATH
+  remote: .
+  specs:
+    malcolmx (0.0.2)
+      crack
+      httparty
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    crack (0.1.8)
+    httparty (0.6.1)
+      crack (= 0.1.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  crack
+  httparty
+  malcolmx!
