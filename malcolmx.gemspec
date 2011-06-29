@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.email       = ["minhajuddin@cosmicvent.com"]
   s.homepage    = "http://github.com/minhajuddin/malcolmx"
   s.summary     = %q{Find out if the domain name you want is available!}
-  s.description = %q{MalcolmX is a gem which allows you to find out if a gem is available programmatically or through the command prompt}
+  s.description = %q{MalcolmX is a gem which allows you to find out if a domain name is available programmatically or through the command prompt}
 
   s.rubyforge_project = "malcolmx"
 
